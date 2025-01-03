@@ -114,6 +114,26 @@
             margin-left: 0;
             color: #072f93; /* dark blue */
         }
+        @media (max-width: 768px) {
+            .logo, .doctor-image, .patient-image {
+                max-width: 100%;
+                position: static;
+                transform: none;
+                margin: 0 auto;
+                display: block;
+            }
+            .limited-width {
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            header, footer {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
