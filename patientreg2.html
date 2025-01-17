@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Case Paper Form</title>
+    <link rel="stylesheet" href="patstyle2.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Case Paper</h1>
+        <form>
+            <div class="form-group">
+                <label for="medicines">Ongoing Medicines:</label>
+                <textarea id="medicines" name="medicines" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="family-history">Family History:</label>
+                <textarea id="family-history" name="family-history" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="past-medical-history">Past Medical History:</label>
+                <textarea id="past-medical-history" name="past-medical-history" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="personal-history">Personal History:</label>
+                <textarea id="personal-history" name="personal-history" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Mental Status:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="mental-status" value="normal"> Normal</label>
+                    <label><input type="checkbox" name="mental-status" value="anxious"> Anxious</label>
+                    <label><input type="checkbox" name="mental-status" value="sad/no-interest"> Sad/No Interest</label>
+                    <label><input type="checkbox" name="mental-status" value="irritable"> Irritable</label>
+                    <label><input type="checkbox" name="mental-status" value="withdrawn"> Withdrawn</label>
+                    <label><input type="checkbox" name="mental-status" value="fearful"> Fearful</label>
+                    <label><input type="checkbox" name="mental-status" value="body-image"> Body Image</label>
+                    <label><input type="checkbox" name="mental-status" value="suicidal"> Suicidal</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="socio-economic-issues">Socio-economic Issues:</label>
+                <textarea id="socio-economic-issues" name="socio-economic-issues" rows="3"></textarea>
+            </div>
+            <h2>Care Giver Details</h2>
+            <div class="form-group">
+                <label for="caregiver-name">Name:</label>
+                <input type="text" id="caregiver-name" name="caregiver-name">
+            </div>
+            <div class="form-group">
+                <label for="relationship">Relationship with the Patient:</label>
+                <input type="text" id="relationship" name="relationship">
+            </div>
+            <div class="form-group">
+                <label for="caregiver-age">Age:</label>
+                <input type="number" id="caregiver-age" name="caregiver-age">
+            </div>
+            <div class="form-group">
+                <label for="caregiver-sex">Sex:</label>
+                <select id="caregiver-sex" name="caregiver-sex">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dependents">Number of Dependents:</label>
+                <input type="number" id="dependents" name="dependents">
+            </div>
+            <div class="form-group">
+                <label>Social Entitlements:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="entitlements" value="ration-card"> Ration Card</label>
+                    <label><input type="checkbox" name="entitlements" value="aadhar-card"> Aadhar Card</label>
+                    <label><input type="checkbox" name="entitlements" value="old-age-pension"> Old Age Pension</label>
+                    <label><input type="checkbox" name="entitlements" value="widow-pension"> Widow Pension</label>
+                    <label><input type="checkbox" name="entitlements" value="disability-pension"> Disability Pension</label>
+                    <label><input type="checkbox" name="entitlements" value="education-support"> Education Support</label>
+                    <label><input type="checkbox" name="entitlements" value="bank-account"> Bank Account</label>
+                </div>
+            </div>
+            <h2>Pain Assessment</h2>
+            <div class="pain-table">
+                <div class="form-group">
+                    <label>Site:</label>
+                    <input type="text" name="pain-site">
+                </div>
+                <div class="form-group">
+                    <label>Intensity (0-10):</label>
+                    <input type="number" name="pain-intensity" min="0" max="10">
+                </div>
+                <div class="form-group">
+                    <label>Duration:</label>
+                    <select name="pain-duration">
+                        <option value="constant">Constant</option>
+                        <option value="intermittent">Intermittent</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Character:</label>
+                    <select name="pain-character">
+                        <option value="aching">Aching</option>
+                        <option value="throbbing">Throbbing</option>
+                        <option value="burning">Burning</option>
+                        <option value="pricking">Pricking</option>
+                        <option value="lancinating">Lancinating</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Cause:</label>
+                    <input type="text" name="pain-cause">
+                </div>
+                <div class="form-group">
+                    <label>Provoking/Palliating Factor:</label>
+                    <textarea name="pain-factor" rows="2"></textarea>
+                </div>
+            </div>
+            <h2>Examinations</h2>
+            <div class="form-group">
+                <label for="local-examination">Local Examination:</label>
+                <textarea id="local-examination" name="local-examination" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="systemic-examination">Systemic Examination:</label>
+                <textarea id="systemic-examination" name="systemic-examination" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="investigation">Investigation:</label>
+                <textarea id="investigation" name="investigation" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="treatment">Treatment Advised:</label>
+                <textarea id="treatment" name="treatment" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login and Signup Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fffffe; /* Updated background color */
+            transition: background-color 0.3s;
+        }
+
+        .container {
+            max-width: 400px;
+            background: #c4ae0b; /* Changed form background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            margin-bottom: 10px; /* Added margin-bottom to reduce gap */
+            margin-left: 80px;
+            margin-right: 15px;
+        }
+
+        .forms {
+            margin-bottom: 0; /* Reduced gap between forms */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #072f93;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0e053d; /* Changed button color to violet */
+            color: #f8f5f5;
+            font-size: 16px;
+        }
+
+        .form-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form-link a {
+            color: #080808;
+            text-decoration: none;
+        }
+
+        .form-link a:hover {
+            text-decoration: underline;
+        }
+
+        .media-options {
+            margin-top: 20px;
+        }
+
+        .media-options a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .media-options a .facebook-icon {
+            margin-right: 10px;
+        }
+
+        .media-options a .google-img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .media-options a.btn-primary {
+            background-color: #021234;
+        }
+
+        .media-options a.btn-danger {
+            background-color: #db4437;
+        }
+
+        .dark-theme {
+            background-color: #0c0c0b;
+            color: #fff;
+        }
+
+        .dark-theme .container {
+            background: #8a5959;
+            color: #fff;
+        }
+
+        .dark-theme .form-group input {
+            background: #555;
+            color: #fff;
+            border: 1px solid #666;
+        }
+
+        .dark-theme .form-group button {
+            background-color: #555;
+        }
+
+        .dark-theme .form-link a {
+            color: #bcbbb9;
+        }
+
+        .dark-theme .media-options a {
+            background-color: #caa315;
+        }
+
+        .dark-theme .media-options a.btn-primary {
+            background-color: #021235;
+        }
+
+        .dark-theme .media-options a.btn-danger {
+            background-color: #db4437;
+        }
+
+        .dark-theme-toggle {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            background: #a672c9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .signup-container {
+            background: #bca810; /* Changed signup form background color */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./Screenshot 2025-01-08 112253.png" width="500px" srcset="">
+
+    <!-- Login Form -->
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header style="text-align: center;">Login</header>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Enter Email" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" class="form-control">
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block">Login</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="media-options">
+                <a href="#" class="btn btn-primary btn-sm btn-block">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="btn btn-primary btn-block">
+                    <img src="./google_logo.png" alt="Google" class="google-img">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Form -->
+    <section class="container forms signup-container">
+        <div class="form signup">
+            <div class="form-content">
+                <header style="text-align: center;">Signup</header>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="create-password">Create password</label>
+                        <input type="password" id="create-password" placeholder="Create your password" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm your password" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block">Signup</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="media-options">
+                <a href="#" class="btn btn-primary btn-sm btn-block">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="btn btn-primary btn-block">
+                    <img src="./google_logo.png" alt="Google" class="google-img">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const toggleButton = document.querySelector('.dark-theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+
+</html>
